@@ -1,45 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator | Project</title>
     <link rel="stylesheet" href="./public/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h2>Simple Calculator</h2>
+    <div class="background"></div>
+    <nav>
+        <button onclick="showDiv('calculator')">Calculator</button>
+        <button onclick="showDiv('bmi')">BMI Calculator</button>
+        <button onclick="showDiv('fibonacci')">fibonacci </button>
+    </nav>
 
-    <div class="calculator" >
-        <input type="text" id="result" readonly>
-    <br>
-    <button onclick="appendNumber('1')">1</button>
-    <button onclick="appendNumber('2')">2</button>
-    <button onclick="appendNumber('3')">3</button>
-    <button onclick="appendOperator('+')">+</button>
-    <br>
-    <button onclick="appendNumber('4')">4</button>
-    <button onclick="appendNumber('5')">5</button>
-    <button onclick="appendNumber('6')">6</button>
-    <button onclick="appendOperator('-')">-</button>
-    <br>
-    <button onclick="appendNumber('7')">7</button>
-    <button onclick="appendNumber('8')">8</button>
-    <button onclick="appendNumber('9')">9</button>
-    <button onclick="calculate()">=</button>
-    <br>
-    <button onclick="appendNumber('0')">0</button>
-    <button onclick="clearResult()">c</button>
-    <button onclick="appendOperator('*')">*</button>
-    <button onclick="appendOperator('/')">/</button>
-
+    <div class="content">
+        <P><span>D</span>ear Math,</P>
+        <p>I'm Sick and tired of finding your <span>"x"</span> <br>
+            just accept the fact that she's gone <br>
+            Move on dude! 😂</p>
     </div>
+
+    <div id="calculator" class="container">
+        <div class="calculator">
+            <input class="display" type="text" id="resultcalc" readonly>
+            <br>
+            <button class="number" onclick="appendNumber('1')">1</button>
+            <button class="number" onclick="appendNumber('2')">2</button>
+            <button class="number" onclick="appendNumber('3')">3</button>
+            <button class="number" onclick="appendOperator('+')">+</button>
+            <br>
+            <button class="number" onclick="appendNumber('4')">4</button>
+            <button class="number" onclick="appendNumber('5')">5</button>
+            <button class="number" onclick="appendNumber('6')">6</button>
+            <button class="number" onclick="appendOperator('-')">-</button>
+            <br>
+            <button class="number" onclick="appendNumber('7')">7</button>
+            <button class="number" onclick="appendNumber('8')">8</button>
+            <button class="number" onclick="appendNumber('9')">9</button>
+            <button class="number" onclick="calculate()">=</button>
+            <br>
+            <button class="number" onclick="appendNumber('0')">0</button>
+            <button class="number" onclick="clearResult()">c</button>
+            <button class="number" onclick="appendOperator('*')">*</button>
+            <button class="number" onclick="appendOperator('/')">/</button>
     
+        </div>
+    </div>
+    <div id="bmi" class="container">
+        <div class="bmi">
+            <label for="weight">Weight (kg) :</label>
+            <input class="inputNumbers" type="number" id="weight" placeholder="Enter weight in kg"> <br>
+
+            <label for="height">Height (cm) :</label>
+            <input class="inputNumbers" type="number" id="height" placeholder="Enter height in cm"> <br>
+
+            <button class="sumBmi" onclick="calculateBMI()">Calculate BMI</button>
+            <div class="resultback" >
+                <div id="resultbmi"></div>
+            </div>
+        </div>
+    </div>
+    <div id="fibonacci" class="container">
+        <label for="num">Generate Fibonacci Numbers up to:</label>
+        <input type="number" id="num" placeholder="Enter a number">
+        <button class="generate" onclick="generateFibonacci()">Generate</button>
+        <div id="result" class="fib-result"></div>
+    </div>
+
+
+
     <script src="./public/calculator.js"></script>
+    <script src="./public/index.js"></script>
 </body>
 
-<footer>  
-<p>Posted by: Paul</p>    
-<p>Contact information:   
-<a href="mailto:paulraj2218@gmail.com">Paulraj2218@gmail.com</a>.  </p>  
-</footer>  
+<!-- <footer>
+    <p>Posted by: Paul</p>
+    <p>Contact information:
+        <a href="mailto:paulraj2218@gmail.com">Paulraj2218@gmail.com</a>.
+    </p>
+</footer> -->
 </html>
